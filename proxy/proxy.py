@@ -17,6 +17,10 @@ class Proxy(object):
                                 port_xpath="//tr[@class]//td[3]/text()")
             parser.parse()
 
+    def delete_proxies(self):
+        FreeProxy.objects.all().delete()
+        print "Все прокси из Базы Данных были удалены"
+
     def get_proxy(self):
         """ Возвращает прокси, который реже использовался
         :return: адрес proxy

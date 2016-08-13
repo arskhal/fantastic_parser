@@ -1,6 +1,7 @@
 # coding: utf-8
 from lxml import html
 import requests
+from settings.orm_settings import *
 from .models import FreeProxy
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -75,3 +76,4 @@ class ParseProxy(object):
         bad_proxy.working = False
         bad_proxy.save()
         return True
+

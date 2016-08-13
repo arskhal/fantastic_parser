@@ -49,15 +49,15 @@ class FantasticParse(object):
         number = 1
         text = u''
         for sites in sites_list:
-            text += u'#'*140 + u'\n'
-            text += u'# страница №{0}'.format(page) + u' '*126 + u'#\n'
-            text += u'#' + u' '*138 + u'#\n'
+            text += u'#'*155 + u'\n'
+            text += u'# страница №{0}'.format(page) + u' '*141 + u'#\n'
+            text += u'#' + u' '*153 + u'#\n'
             for site in sites:
-                part = u'#  {0}) {1} -> {2}'.format(number, site.title, site.url)
-                space_num = 139 - len(part)
+                part = u'#  {0}) {1} -> {2} ({3})'.format(number, site.title, site.url, site.date_time)
+                space_num = 154 - len(part)
                 text += part + u' '*space_num + u'#\n'
                 number += 1
             page += 1
-        text += u'#' + u' '*138 + u'#\n'
-        text += u'#'*140 + u'\n'
+        text += u'#' + u' '*153 + u'#\n'
+        text += u'#'*155 + u'\n'
         return text.encode('utf-8')
