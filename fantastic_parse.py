@@ -10,8 +10,7 @@ from sys import argv
 if __name__ == "__main__":
     if len(argv) >= 2:
         if argv[1] == 'delete_proxies':
-            delete_proxies = Proxy()
-            delete_proxies.delete_proxies()
+            Proxy.delete_proxies()
 
     proxy_object = Proxy()
     proxy = proxy_object.get_proxy()

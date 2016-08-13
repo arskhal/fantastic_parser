@@ -17,7 +17,8 @@ class Proxy(object):
                                 port_xpath="//tr[@class]//td[3]/text()")
             parser.parse()
 
-    def delete_proxies(self):
+    @staticmethod
+    def delete_proxies():
         FreeProxy.objects.all().delete()
         print "Все прокси из Базы Данных были удалены"
 
